@@ -15,13 +15,11 @@
     {% if things.completed%}
       <tr class = 'table-secondary'>
         <td class="striker"><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td> 
-        <td><a href = "{% url 'uncross' things.id %}">Uncross</a></td>
         <td><a href= "{% url 'delete' things.id %}" >Delete</a></td>
       </tr>
     {% else %}
       <tr>
         <td class="striker"><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td> 
-        <td><a  href="{% url 'cross_off' things.id %}"> Cross-off </a></td>
         <td><a href= {% url 'delete' things.id %}>Delete</a></td>
       </tr>
 
